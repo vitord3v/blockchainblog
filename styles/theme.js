@@ -23,7 +23,7 @@ const theme = extendTheme({
     global: {
      
       body: {
-        bg: "brand.600",
+        bg: "black",
         color: "white",
       },
      
