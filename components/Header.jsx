@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Link, Input, Button, FormControl,Flex } from "@chakra-ui/react";
+import {  Link, Input, Button, FormControl,Flex } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
       <Link href="/about" mr={5}>
         Todos
       </Link>
-      <FormControl display="flex" ml={5} onSubmit={onSearchSubmit}>
+      <FormControl display="flex"ml={5} onSubmit={onSearchSubmit}>
           <Input
             placeholder="Nome do artigo"
             value={searchTerm}
@@ -36,7 +36,18 @@ const Header = () => {
           <Button type="submit" display="inline-block">
             Pesquisar
           </Button>
+            
       </FormControl>
+      <Link href="/login" mr={5}>
+        <Button>
+        Entrar
+        </Button>
+      </Link>
+      <Link href="/about" mr={5}>
+        <Button>
+        Cadastre-se
+        </Button>
+      </Link>
     </Flex>
   );
 };
