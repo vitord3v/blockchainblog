@@ -18,7 +18,7 @@ const Header = () => {
       <Link href="/" mr={5}>
         Inicio
       </Link>
-      <Link href="/about" mr={5}>
+      <Link href="/topPosts" mr={5}>
         Bombando
       </Link>
       <Link href="/about" mr={5}>
