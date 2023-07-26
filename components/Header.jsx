@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {  Link, Input, Button, FormControl,Flex } from "@chakra-ui/react";
+import { Input, Button, FormControl,Flex, Text } from "@chakra-ui/react";
+import Link from 'next/link'
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -14,16 +15,22 @@ const Header = () => {
   };
 
   return (
-    <Flex bg="purple.800" w="100%" alignItems='center'  p={4} color="white"  fontWeight="bold">
-      <Link href="/" mr={5}>
-        Inicio
-      </Link>
-      <Link href="/topPosts" mr={5}>
-        Bombando
-      </Link>
-      <Link href="/about" mr={5}>
-        Todos
-      </Link>
+    <Flex bg="purple.800" w="100%" alignItems='center'  p={4} color="white"  fontWeight="bold" gap='2'>
+      <Button>
+        <Link href="/" mr={5}>
+          <Text color='black' >Inicio</Text>
+        </Link>
+      </Button>
+      <Button>
+        <Link href="/topPosts" mr={5}>
+          <Text color='black'>Bombando</Text>
+        </Link>
+      </Button>
+      <Button>
+        <Link href="/about" mr={5}>
+          <Text color='black'>Todos</Text>
+        </Link>
+      </Button>
       <FormControl display="flex"ml={5} onSubmit={onSearchSubmit}>
           <Input
             placeholder="Nome do artigo"
@@ -38,16 +45,16 @@ const Header = () => {
           </Button>
             
       </FormControl>
-      <Link href="/login" mr={5}>
-        <Button>
-        Entrar
-        </Button>
-      </Link>
-      <Link href="/signup" mr={5}>
-        <Button>
-        Cadastre-se
-        </Button>
-      </Link>
+      <Button>
+        <Link href="/login" mr={5}>
+          <Text color='black'>Entrar</Text>
+        </Link>
+      </Button>
+      <Button>
+        <Link href="/signup" mr={5}>
+          <Text color='black'>Cadastrar-se</Text>
+        </Link>
+      </Button>
     </Flex>
   );
 };
