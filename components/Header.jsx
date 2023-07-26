@@ -43,7 +43,7 @@ const Header = () => {
         Entrar
         </Button>
       </Link>
-      <Link href="/about" mr={5}>
+      <Link href="/signup" mr={5}>
         <Button>
         Cadastre-se
         </Button>
